@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JobEntry - Job Portal Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="contact.css">
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      /* Basic styling for the popup */
+      #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+      #popup.active {
+        display: block;
+      }
+      #popup .close {
+        cursor: pointer;
+        float: right;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar Start -->
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+      >
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5"
+          style="width: 20%"
+        >
+          <img src="./img/logo.png" style="width: 45%" alt="" />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler me-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+
+            <a href="career.html" class="nav-item nav-link">Career</a>
+            <a href="services.html" class="nav-item nav-link">Our Services</a>
+            <a href="testimonial.html" class="nav-item nav-link">Testimonial</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Carousel Start -->
+      <div class="container-fluid p-0">
+        <div class="owl-carousel header-carousel position-relative">
+          <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(43, 57, 64, 0.5)"
+            >
+              <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-3 text-white animated slideInDown mb-4">
+                      Unlock Your Dream Job – Find Opportunities Customised Just
+                      for You!
+                    </h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                      Discover a wide range of job openings across various
+                      industries. Your next career move starts here.
+                    </p>
+                    <a
+                      href="career.html"
+                      class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                      >Search A Job</a
+                    >
+                    <a
+                      href="/services.html"
+                      class="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
+                      >Find A Talent</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(43, 57, 64, 0.5)"
+            >
+              <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-3 text-white animated slideInDown mb-4">
+                      Connecting Talent with Opportunity – Start Your Career
+                      Journey Today!
+                    </h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                      Explore jobs that match your skills and aspirations. Join
+                      thousands of professionals finding their perfect fit
+                    </p>
+                    <a
+                      href="./career.html"
+                      class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                      >Search A Job</a
+                    >
+                    <a
+                      href="./contact.html"
+                      class="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
+                      >Find A Talent</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel End -->
+
+      <!-- Category Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            Explore By Category
+          </h1>
+          <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a href="./job-and-career.html" class="cat-item rounded p-4">
+                <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+                <h6 class="mb-3">Job And Career Development</h6>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <a href="./career-counseling.html" class="cat-item rounded p-4">
+                <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                <h6 class="mb-3">Career Counselling</h6>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+              <a href="./resume-building.html" class="cat-item rounded p-4">
+                <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                <h6 class="mb-3">Resume Building</h6>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+              <a
+                href="./personality-development.html"
+                class="cat-item rounded p-4"
+              >
+                <i class="fa fa-3x fa-tasks text-primary mb-4"></i>
+                <h6 class="mb-3">Personality Development</h6>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a
+                href="./interview-preparation.html"
+                class="cat-item rounded p-4"
+              >
+                <i class="fa fa-3x fa-chart-line text-primary mb-4"></i>
+                <h6 class="mb-3">Interview Preparation</h6>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <a
+                href="./communication-skills.html"
+                class="cat-item rounded p-4"
+              >
+                <i class="fa fa-3x fa-hands-helping text-primary mb-4"></i>
+                <h6 class="mb-3">Communication Skills</h6>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+              <a
+                href="./training-development.html"
+                class="cat-item rounded p-4"
+              >
+                <i class="fa fa-3x fa-book-reader text-primary mb-4"></i>
+                <h6 class="mb-3">Training And Development</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Category End -->
+
+      <!-- our companys rilation -->
+      <!-- <div style="background-color: #071313cc; color: white">
+        <h1 class="text-white text-center pt-5">Our Partners</h1>
+        <div class="company-container">
+          <div class="company-card">
+            <img src="./img/company1-bol7.png" alt="Bol7.com Logo" />
+          </div>
+          <div class="company-card">
+            <img
+              src="./img/company2-mymoneymantra.webp"
+              alt="Money Mantra Logo"
+            />
+          </div>
+          <div class="company-card">
+            <img src="./img/company3-redhat.svg" alt="Red Hat Logo" />
+          </div>
+          <div class="company-card">
+            <img src="./img/company4-amazon.webp" alt="Amazon Logo" />
+          </div>
+          <div class="company-card">
+            <img src="./img/company5-delhitap.png" alt="Delhi Tape Logo" />
+          </div>
+          <div class="company-card">
+            <img
+              src="./img/company6-ecordon-solution.png"
+              alt="Ecordon Solution Logo"
+            />
+          </div>
+          <div class="company-card">
+            <img
+              src="./img/company7-google-partners.png"
+              alt="Google Partner Logo"
+            />
+          </div>
+          <div class="company-card">
+            <img src="./img/company8-whatsapp.png" alt="WhatsApp Logo" />
+          </div>
+        </div>
+      </div> -->
+
+      <div
+        class="container-xxl py-5 wow fadeInUp bg-dark"
+        data-wow-delay="0.1s"
+      >
+        <div class="container">
+          <h1 class="text-white text-center pt-5">Our Partners</h1>
+          <div class="owl-carousel company-logos">
+            <div class="company-card">
+              <img src="./img/company1-bol7.png" alt="Bol7.com Logo" />
+            </div>
+            <div class="company-card">
+              <img
+                src="./img/company2-mymoneymantra.webp"
+                alt="Money Mantra Logo"
+              />
+            </div>
+            <div class="company-card">
+              <img src="./img/company3-redhat.svg" alt="Red Hat Logo" />
+            </div>
+            <div class="company-card">
+              <img src="./img/company4-amazon.webp" alt="Amazon Logo" />
+            </div>
+            <div class="company-card">
+              <img src="./img/company5-delhitap.png" alt="Delhi Tape Logo" />
+            </div>
+            <div class="company-card">
+              <img
+                src="./img/company6-ecordon-solution.png"
+                alt="Ecordon Solution Logo"
+              />
+            </div>
+            <div class="company-card">
+              <img
+                src="./img/company7-google-partners.png"
+                alt="Google Partner Logo"
+              />
+            </div>
+            <div class="company-card">
+              <img src="./img/company8-whatsapp.png" alt="WhatsApp Logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="owl-carousel owl-theme">
+        <div class="company-container">
+          <div class="item">
+            <img src="./img/company1-bol7.png" alt="Bol7.com Logo" />
+          </div>
+          <div class="item">
+            <img
+              src="./img/company2-mymoneymantra.webp"
+              alt="Money Mantra Logo"
+            />
+          </div>
+          <div class="item">
+            <img src="./img/company3-redhat.svg" alt="Red Hat Logo" />
+          </div>
+          <div class="item">
+            <img src="./img/company4-amazon.webp" alt="Amazon Logo" />
+          </div>
+          <div class="item">
+            <img src="./img/company5-delhitap.png" alt="Delhi Tape Logo" />
+          </div>
+          <div class="item">
+            <img
+              src="./img/company6-ecordon-solution.png"
+              alt="Ecordon Solution Logo"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="./img/company7-google-partners.png"
+              alt="Google Partner Logo"
+            />
+          </div>
+          <div class="item">
+            <img src="./img/company8-whatsapp.png" alt="WhatsApp Logo" />
+          </div>
+        </div>
+      </div> -->
+
+      <!-- our companys rilation end -->
+
+      <!-- About Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <div class="row g-0 about-bg rounded overflow-hidden">
+                <div class="col-6 text-start">
+                  <img class="img-fluid w-100" src="img/about-1.jpg" />
+                </div>
+                <div class="col-6 text-start">
+                  <img
+                    class="img-fluid"
+                    src="img/about-2.jpg"
+                    style="width: 85%; margin-top: 15%"
+                  />
+                </div>
+                <div class="col-6 text-end">
+                  <img
+                    class="img-fluid"
+                    src="img/about-3.jpg"
+                    style="width: 85%"
+                  />
+                </div>
+                <div class="col-6 text-end">
+                  <img class="img-fluid w-100" src="img/about-4.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <h1 class="mb-4">
+                We find the best talent in the job and placement industry
+              </h1>
+              <p class="mb-4">
+                Connecting you with top employers and exceptional candidates.
+                Whether you're looking to advance your career or build a winning
+                team, we're here to make it happen.
+              </p>
+              <p><i class="fa fa-check text-primary me-3"></i>Career Growth</p>
+              <p><i class="fa fa-check text-primary me-3"></i>Top Employers</p>
+              <p><i class="fa fa-check text-primary me-3"></i>Skilled Talent</p>
+              <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- video-section for home page -->
+      <div class="videobg">
+        <div class="container mt-4">
+          <h1 class="text-center mb-5">
+            Our Best <span style="color: red"> Videoz </span>
+          </h1>
+          <div class="row">
+            <!-- First Column -->
+            <div class="col-md-3 mb-4">
+              <h2>HKS Consulting Placement Services</h2>
+              <p>
+                We provide top-notch placement services to help you find the
+                best career opportunities. Our expert consultants work closely
+                with you to understand your career goals and match you with the
+                right employers.
+              </p>
+              <p>
+                Watch our video to learn more about how we can assist you in
+                achieving your career aspirations.
+              </p>
+            </div>
+            <!-- Second Column -->
+            <div class="col-md-12 col-lg-3 mb-4">
+              <video controls class="w-100 clientVideo">
+                <source src="./img/client-video3.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-md-12 col-lg-3 mb-4">
+              <video controls class="w-100 clientVideo">
+                <source src="./img/client-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-md-12 col-lg-3 mb-4">
+              <video controls class="w-100 clientVideo">
+                <source src="./img/client-video2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- video-section for home page end -->
+
+      <!-- Jobs Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            Job Listing
+          </h1>
+          <section class="container mb-5">
+            <h2 class="section-title mb-5">Current Job Openings</h2>
+            <div id="job-listings-container" class="job-listings">
+              <!-- Job listings will be dynamically inserted here -->
+            </div>
+            <div
+              class="modal fade"
+              id="applyModal"
+              tabindex="-1"
+              aria-labelledby="applyModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="applyModalLabel">
+                      Apply for the Job
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body bd-dark">
+                    <form
+                    id="applicationForm"
+                    style="display: flex; flex-direction: column; gap: 5px"
+                  >
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <label
+                          for="name"
+                          style="font-weight: bold;"
+                          >Full Name:</label
+                        >
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          style="
+                            padding: 5px;
+                            border: 1px solid #ddd;
+                            width: 100%;
+                          "
+                        />
+                      </div>
+                      <div class="col-6">
+                        <label
+                          for="email"
+                          style="font-weight: bold;"
+                          >Email Address:</label
+                        >
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          style="
+                            padding: 5px;
+                            border: 1px solid #ddd;
+                            width: 100%;
+                          "
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <label
+                          for="phone"
+                          style="font-weight: bold;"
+                          >Phone Number:</label
+                        >
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          required
+                          style="
+                            padding: 5px;
+                            border: 1px solid #ddd;
+                            width: 100%;
+                          "
+                        />
+                      </div>
+                      <div class="col-6">
+                        <label
+                          for="resume"
+                          style="font-weight: bold;"
+                          >Resume (PDF only):</label
+                        >
+                        <input
+                          type="file"
+                          id="resume"
+                          name="resume"
+                          accept=".pdf"
+                          style="
+                            padding: 5px;
+                            border: 1px solid #ddd;
+                            width: 100%;
+                          "
+                        />
+                      </div>
+                    </div>
+
+                    <label
+                      for="cover-letter"
+                      style="font-weight: bold;"
+                      >Cover Letter:</label
+                    >
+                    <textarea
+                      id="cover-letter"
+                      name="cover_letter"
+                      rows="6"
+                      style="
+                        padding: 5px;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        width: 100%;
+                      "
+                    ></textarea>
+
+                    <button
+                      type="submit"
+                      style="
+                        padding: 15px;
+                        border: none;
+                        border-radius: 4px;
+                        background-color: black;
+                        color: white;
+                        font-size: 12px;
+                        cursor: pointer;
+                        margin-top: 10px;
+                      "
+                    >
+                      Submit Application
+                    </button>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- Popup Message -->
+      <div id="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p>Application submitted successfully!</p>
+      </div>
+      <!-- Jobs End -->
+
+      <!-- Testimonial Start -->
+      <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+          <h1 class="text-center mb-5">Our Clients Say!!!</h1>
+          <div class="owl-carousel testimonial-carousel">
+            <div class="testimonial-item bg-light rounded p-4">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p>
+                Secured multiple freelance contracts easily. Ideal for
+                freelancers seeking consistent work.
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="img/testimonial-1.jpg"
+                  style="width: 50px; height: 50px"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">Harsh Vardhan</h5>
+                  <small>Software Developer</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-4">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p>
+                Landed my first marketing job in a month. Perfect for fresh
+                graduates!
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="img/testimonial-2.jpg"
+                  style="width: 50px; height: 50px"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">Gourav Panchal</h5>
+                  <small>Web Developer</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-4">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p>
+                Found a senior IT position that fits my career goals. Highly
+                recommended!
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="img/testimonial-3.jpg"
+                  style="width: 50px; height: 50px"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">Harsh Gupta</h5>
+                  <small>Director</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-4">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p>
+                Streamlined hiring process. We’ve found top talent through this
+                portal.
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="img/testimonial-4.jpg"
+                  style="width: 50px; height: 50px"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">Khushi Sehrawat</h5>
+                  <small>Senior Business Development Manager</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial End -->
+
+      <!-- Footer Start -->
+      <div class="container-fluid bg-dark text-white footer pt-5 mt-5">
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-2 col-md-6">
+              <h5 class="text-white mb-4">Company</h5>
+              <a class="btn btn-link text-white-50" href="">About Us</a>
+              <a class="btn btn-link text-white-50" href="">Contact Us</a>
+              <a class="btn btn-link text-white-50" href="">Our Services</a>
+              
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <h5 class="text-white mb-4">Quick Links</h5>
+              <a class="btn btn-link text-white-50" href="">About Us</a>
+              <a class="btn btn-link text-white-50" href="">Contact Us</a>
+              <a class="btn btn-link text-white-50" href="">Our Services</a>
+            </div>
+            <div class="col-lg-5 col-md-12">
+              <h5 class="text-white mb-4">Contact</h5>
+
+              <a class="btn btn-link text-white-50" href="tel:+917011715126">
+                <i class="fa fa-phone-alt me-1"></i> 701-171-5126
+              </a>
+              <a
+                class="btn btn-link text-white-50"
+                href="mailto:Info@hksconsultingplacementservices.com"
+              >
+                <i class="fa fa-envelope me-1"></i>
+                Info@hksconsultingplacementservices.com
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-12">
+              <h5 class="text-white mb-4">Newsletter</h5>
+              <p>
+                Stay ahead in your career! Subscribe to our newsletter for the
+                latest job openings, career advice.
+              </p>
+              <div class="position-relative mx-auto" style="max-width: 400px">
+                <input
+                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your email"
+                />
+                <button
+                  type="button"
+                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+              <h5 class="text-white">Social Media :</h5>
+              <div class="social-media pt-0">
+                <div class="social-icons">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/profile.php?id=61564360511066&mibextid=ZbWKwL"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/hks8471?igshid=MTMwMGlzaXFnZWxv"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/hks-consulting-placement-services-owner-7038b2325/"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-12 d-flex justify-content-center mb-3 mb-md-0">
+                All Rights Reserved. Designed By
+                <a
+                  class="text-white"
+                  style="text-decoration: none"
+                  href="https://www.digiindiasolutions.com/"
+                >
+                  &nbsp; Digi India Solution</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script src="career.js"></script>
+  </body>
+</html>
